@@ -24,7 +24,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         payload={}
         headers = {}
 
-        response = requests.request("POST", "https://73e4f34b6a989e4dd250fbec2d6679e5da3d24457e955e88:c2b855f35c6501e1768cae8b0b32eb3baeba3ccb532c362c@api.exotel.com/v1/Accounts/eunimart1/Calls/connect?From={}&To={}&CallerId={}".format(from_number,to_number,CallerId_number), headers=headers, data=payload)
+        response = requests.request("POST", "https://id:secretkey@api.exotel.com/v1/Accounts/eunimart1/Calls/connect?From={}&To={}&CallerId={}".format(from_number,to_number,CallerId_number), headers=headers, data=payload)
         return func.HttpResponse("Success")
     else:
         return func.HttpResponse(
